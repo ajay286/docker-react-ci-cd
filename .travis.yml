@@ -6,4 +6,4 @@ before_install:
   - docker build -t ajay286/docker-react-ci-cd -f Dockerfile.dev .
 
 script:
-  - docker run ajay286/docker-react-ci-cd npm run test -- --coverage  
+  - docker run -e CI=true  ajay286/docker-react-ci-cd npm run test
